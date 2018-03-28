@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notes</title>
+	<link rel="stylesheet" type="text/css" href="cssnotes.css">
+	<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+</head>
+<body>
+	<header>
+		<img src="title.png" alt="My Task Board">
+	</header>
+	<div id="write_notes">
+		<form>
+			<textarea name="note" id="writeANote" cols="9" rows="3" required></textarea>
+			<input type="datetime-local" id="dueTime" required>
+			<input type="submit" id="submit" value="Add note">
+		</form>
+	</div>
+	<div id="all_notes">
+	</div>
+	<script src="jsnotes.js"></script>
+</body>
+</html>

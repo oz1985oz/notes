@@ -1,0 +1,112 @@
+body {
+	background-image: url('tile.jpg');
+}
+header, #write_notes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1.5rem;
+}
+form {
+	background-image: url('formbg.jpg');
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+textarea {
+	width: 100%;
+	background-image: url('formbg.jpg');
+	background-repeat: repeat-y;
+	font-size: 182%; /*Work for me that the text will be between the lines*/
+	padding-left: 5rem;
+	padding-top: 1rem;
+	border: none;
+	resize: none;
+	font-family: 'Allan';
+}
+textarea:focus, input {
+	outline: none;
+}
+#dueTime {
+	margin-left: 5rem;
+	background: transparent;
+	border: none;
+}
+#submit {
+	border-radius: 50%;
+	background-color: #20B2AA;
+	color: #eee;
+}
+#submit:hover {
+	background-color: #008080;
+}
+#all_notes {
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: space-between;*/
+}
+.note {
+	background-image: url('notebg.png');
+	background-repeat: no-repeat;
+	padding: 1rem;
+	background-size: auto;
+	height: 14rem;
+	margin-right: 1rem;
+	position: relative;
+}
+button.close {
+	position: absolute;
+	top: 1.3rem;
+    right: 0.2rem;
+	background-color: #222;
+    color: #FEFF99;
+	font-size: 120%;
+	font-weight: bold;
+	border: none;
+	border-radius: .3rem;
+}
+.note p {
+	white-space: pre-line;
+	font-family: 'Acme';
+	margin-top: 2rem;
+	height: 9rem;
+	width: 9rem;
+	overflow-y: auto;
+}
+.note span {
+	font-family: 'Acme';
+}
+/*Animation\special design:*/
+.note {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
